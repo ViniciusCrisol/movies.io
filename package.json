@@ -1,0 +1,7 @@
+{
+  "name": "movies.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Crisol <vinicius.crisol@hotmail.com>",
+  "license": "MIT"
+}
