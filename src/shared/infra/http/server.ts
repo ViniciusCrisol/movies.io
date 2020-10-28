@@ -14,7 +14,7 @@ import '@shared/container';
 
 const app = express();
 
-nunjucks.configure(path.resolve(__dirname, '..', '..', 'views'), {
+nunjucks.configure(path.resolve(__dirname, '..', '..', 'public', 'views'), {
   autoescape: true,
   express: app,
 });
