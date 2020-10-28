@@ -2,7 +2,9 @@ import 'reflect-metadata';
 import 'dotenv/config';
 
 import express, { Request, Response, NextFunction } from 'express';
+import nunjucks from 'nunjucks';
 import 'express-async-errors';
+import path from 'path';
 
 import AppError from '@shared/errors/AppError';
 import routes from './routes';
@@ -11,6 +13,11 @@ import '@shared/infra/typeorm';
 import '@shared/container';
 
 const app = express();
+
+nunjucks.configure(path.resolve(__dirname, '..', '..', 'views'), {
+  autoescape: true,
+  express: app,
+});
 
 app.use(express.json());
 app.use(routes);

@@ -9,9 +9,10 @@
     "baseUrl": "./src",
     "allowJs": true,
     "paths": {
-      "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
-      "@shared/*": ["shared/*"]
+      "@shared/*": ["shared/*"],
+      "@public/*": ["public/*"],
+      "@modules/*": ["modules/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
