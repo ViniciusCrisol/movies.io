@@ -14,12 +14,12 @@ import '@shared/container';
 
 const app = express();
 
-nunjucks.configure(path.resolve(__dirname, '..', '..', 'public', 'views'), {
+nunjucks.configure(path.resolve(__dirname, '..', '..', 'views', 'public'), {
   autoescape: true,
   express: app,
 });
 
-app.use(express.json());
+app.use(express.static('public'));
 app.use(routes);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
