@@ -14,30 +14,9 @@
 
   <body>
     <main class="main-content">
-      <header>
-        <div class="content">
-          <div class="links">
-            <a href="/filmes/melhores/ano">
-              Filmes do Ano
-            </a>
-            <a href="/criticas">
-              Críticas
-            </a>
-            <a href="/filmes/criticas">
-              Críticas
-            </a>
-          </div>
-          <a href="/filmes/melhores/top10">
-            Indicações da semana
-          </a>
-        </div>
-      </header>
-
+      {% include "components/header.njk" %}
       {% block content %}{% endblock %}
-
-      <footer class="footer">
-        <span class="footer-text">Developed by Vinícius Crisol</span>
-      </footer>
+      {% include "components/footer.njk" %}
     </main>
   </body>
 </html>
