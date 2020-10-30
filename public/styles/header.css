@@ -1,6 +1,5 @@
 header {
-  height: 120px;
-
+  height: 100px;
   background: var(--black);
   border-bottom: 4px solid var(--primary);
 }
@@ -49,9 +48,41 @@ header .content #hamburger-button:hover {
   opacity: 0.5;
 }
 
+header .content .hamburger-button-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+header .content #mobile-menu {
+  width: 100%;
+  padding: 10px 0;
+
+  display: none;
+  flex-direction: column;
+}
+
+header .content #mobile-menu.active {
+  display: flex;
+}
+
+header .content #mobile-menu a {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 8px;
+  background: var(--black);
+  transition: filter 100ms;
+}
+
+header .content #mobile-menu a:hover {
+  filter: brightness(1.5);
+}
+
 @media (max-width: 640px) {
   header {
     max-height: 80vh;
+    min-height: 100px;
     height: auto;
 
     transition: height 200ms;
@@ -72,5 +103,11 @@ header .content #hamburger-button:hover {
 
   header .content #hamburger-button {
     display: flex;
+  }
+}
+
+@media (min-width: 641px) {
+  header .content #mobile-menu {
+    display: none !important;
   }
 }
