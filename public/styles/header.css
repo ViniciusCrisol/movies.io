@@ -1,5 +1,4 @@
 header {
-  width: 100%;
   height: 120px;
 
   background: var(--black);
@@ -43,7 +42,7 @@ header .content #hamburger-button {
   flex-shrink: 0;
   cursor: pointer;
   filter: brightness(1.5);
-  transition: opacity 200ms;
+  transition: opacity 100ms;
 }
 
 header .content #hamburger-button:hover {
@@ -51,7 +50,23 @@ header .content #hamburger-button:hover {
 }
 
 @media (max-width: 640px) {
-  header .content .links {
+  header {
+    max-height: 80vh;
+    height: auto;
+
+    transition: height 200ms;
+  }
+
+  header .content {
+    padding: 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  header .content .links,
+  header .right-link {
     display: none;
   }
 
