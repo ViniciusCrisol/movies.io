@@ -26,66 +26,8 @@ a {
   text-decoration: none;
 }
 
-header {
-  width: 100%;
-  height: 120px;
-
-  background: var(--black);
-  border-bottom: 4px solid var(--primary);
-}
-
-header .content {
-  height: 100%;
-  max-width: 900px;
-
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .content a {
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--header-text);
-}
-
-header .content .links a + a {
-  margin-left: 14px;
-}
-
-header .content #hamburger-button {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-  color: var(--primary);
-  background: var(--black);
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-  cursor: pointer;
-  filter: brightness(1.5);
-  transition: opacity 200ms;
-}
-
-header .content #hamburger-button:hover {
-  opacity: 0.5;
-}
-
-@media (max-width: 640px) {
-  header .content .links {
-    display: none;
-  }
-
-  header .content #hamburger-button {
-    display: flex;
-  }
+#main-content {
+  padding: 20px;
 }
 
 :root {

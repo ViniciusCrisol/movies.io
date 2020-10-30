@@ -2,7 +2,8 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
+    <link rel="stylesheet" href="/styles/header.css"/>
 
     <meta name="keywords" content="Filmes, Críticas, Cinema"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,11 +15,13 @@
   </head>
 
   <body>
-    <main class="main-content">
-      {% include "components/header.njk" %}
+    {% include "components/header.njk" %}
+
+    <main id="main-content">
       {% block content %}{% endblock %}
-      {% include "components/footer.njk" %}
     </main>
+
+    {% include "components/footer.njk" %}
   </body>
 
   <script src="/scripts/menu.js"></script>
