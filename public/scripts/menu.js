@@ -1,4 +1,4 @@
-const hamburgerButton = document.getElementById('hamburger-button');
+const hamburgerButton = this.document.getElementById('hamburger-button');
 
 function handleTogleMenuVisibility() {
   console.log('bom dia');

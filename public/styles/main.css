@@ -27,9 +27,11 @@ a {
 }
 
 header {
-  height: 120px;
   width: 100%;
-  background: #232323;
+  height: 120px;
+
+  background: var(--black);
+  border-bottom: 4px solid var(--primary);
 }
 
 header .content {
@@ -47,16 +49,48 @@ header .content {
 header .content a {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--header-text);
 }
 
 header .content .links a + a {
   margin-left: 14px;
 }
 
+header .content #hamburger-button {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  color: var(--primary);
+  background: var(--black);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  cursor: pointer;
+  filter: brightness(1.5);
+  transition: opacity 200ms;
+}
+
+header .content #hamburger-button:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  header .content .links {
+    display: none;
+  }
+
+  header .content #hamburger-button {
+    display: flex;
+  }
+}
+
 :root {
   --black: #232323;
   --primary: #ffc20e;
-  --text: #fff;
   --background: #fff;
+  --header-text: #fff;
 }
