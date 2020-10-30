@@ -31,13 +31,22 @@ header .content {
   width: 100%;
   max-width: 900px;
 
-  color: var(--text);
   margin: 0 auto;
   padding: 0 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+header .content a {
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+header .content .links a + a {
+  margin-left: 14px;
 }
 
 :root {
