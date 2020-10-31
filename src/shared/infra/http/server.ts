@@ -1,9 +1,9 @@
 import 'reflect-metadata';
 import 'dotenv/config';
+import 'express-async-errors';
 
 import express, { Request, Response, NextFunction } from 'express';
 import nunjucks from 'nunjucks';
-import 'express-async-errors';
 import path from 'path';
 
 import AppError from '@shared/errors/AppError';
