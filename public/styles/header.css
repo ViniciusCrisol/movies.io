@@ -87,7 +87,7 @@ header .content #mobile-menu a {
   width: 100%;
   padding: 10px;
 
-  border-radius: 8px;
+  border-radius: 4px;
   background: var(--black);
   transition: filter 100ms;
 }

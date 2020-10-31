@@ -5,5 +5,6 @@ export default interface IPostsRepository {
   create(data: ICreatePostDTO): Promise<Post>;
   delete(post: Post): Promise<void>;
   save(data: Post): Promise<Post>;
-  list(): Promise<Post[]>;
+  get(): Promise<Post[]>;
+  getTrending(): Promise<Post[]>;
 }

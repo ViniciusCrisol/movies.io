@@ -1,0 +1,17 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+  <form class="login-form">
+    <h1>Acesso</h1>
+
+    <label for="login">Usuário</label>
+    <input id="login"/>
+
+    <label for="password">Senha</label>
+    <input id="password" type="password"/>
+
+    <button type="submit">Enviar</button>
+  </form>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

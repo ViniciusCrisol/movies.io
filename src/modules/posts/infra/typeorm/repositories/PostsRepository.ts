@@ -27,8 +27,19 @@ class PostsRepository implements IPostsRepository {
     return this.ormRepository.save(post);
   }
 
-  public async list(): Promise<Post[]> {
+  public async get(): Promise<Post[]> {
     const posts = await this.ormRepository.find();
+
+    return posts;
+  }
+
+  public async getTrending(): Promise<Post[]> {
+    const posts = await this.ormRepository.find({
+      take: 4,
+      order: {
+        created_at: 'DESC',
+      },
+    });
 
     return posts;
   }

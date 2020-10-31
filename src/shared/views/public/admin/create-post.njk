@@ -1,0 +1,24 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+  <form class="create-post">
+    <h1>Criar novo post</h1>
+
+    <label for="title">Título</label>
+    <input id="title"/>
+
+    <label for="resume">Resumo</label>
+    <input id="resume"/>
+
+    <label for="content">Conteúdo</label>
+    <textarea id="content"/>
+
+    <label for="thumbnail_url">Thumbnail URL</label>
+    <input id="thumbnail_url"/>
+
+    <button type="submit">Criar</button>
+  </form>
+{% endblock %}
+
+<script src="/scripts/post.js"></script>
+{% block scripts %}{% endblock %}
