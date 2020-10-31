@@ -3,16 +3,18 @@ const mobileMenu = this.document.getElementById('mobile-menu');
 
 let menuIsActive = false;
 
-function addClassActiveToMenu() {
+function activateMenu() {
   mobileMenu.classList.add('active');
+  hamburgerButton.classList.add('active');
 }
 
-function removeClassActiveToMenu() {
+function deactivateMenu() {
   mobileMenu.classList.remove('active');
+  hamburgerButton.classList.remove('active');
 }
 
 function closeMenu() {
-  removeClassActiveToMenu();
+  deactivateMenu();
   menuIsActive = false;
 }
 
@@ -22,8 +24,8 @@ function toggleMenuVisibility() {
     return;
   }
 
+  activateMenu();
   menuIsActive = true;
-  addClassActiveToMenu();
 }
 
 function getWindowSize() {

@@ -20,6 +20,12 @@ header .content a {
   font-size: 18px;
   line-height: 1.5;
   color: var(--header-text);
+
+  transition: color 200ms;
+}
+
+header .content a:hover {
+  color: var(--primary);
 }
 
 header .content .links a + a {
@@ -44,7 +50,18 @@ header .content #hamburger-button {
   transition: opacity 100ms;
 }
 
-header .content #hamburger-button:hover {
+header .content #hamburger-button .svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+header .content #hamburger-button .svg-icon path,
+header .content #hamburger-button .svg-icon polygon,
+header .content #hamburger-button .svg-icon rect {
+  fill: var(--primary);
+}
+
+header .content #hamburger-button.active {
   opacity: 0.5;
 }
 
