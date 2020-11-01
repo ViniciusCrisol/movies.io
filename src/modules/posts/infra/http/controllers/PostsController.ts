@@ -5,6 +5,8 @@ import CreatePostService from '@modules/posts/services/CreatePostService';
 
 export default class PostsController {
   public async create(request: Request, response: Response): Promise<Response> {
+    console.log(request.body);
+
     const { content, resume, title, thumbnail_url } = request.body;
 
     const createPost = container.resolve(CreatePostService);

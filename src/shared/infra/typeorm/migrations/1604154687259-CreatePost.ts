@@ -27,7 +27,7 @@ export default class CreatePosts1601848551281 implements MigrationInterface {
           },
           {
             name: 'thumbnail_url',
-            type: 'varchar(50)',
+            type: 'varchar(120)',
           },
           {
             name: 'created_at',
