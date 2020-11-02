@@ -1,7 +1,7 @@
 {% extends "layouts/admin.njk" %}
 
 {% block content %}
-  <form class="create-post" action="/posts/create" method="POST">
+  <form id="create_post" class="create-post">
     <h1>Criar novo post</h1>
 
     <label for="title">Título</label>
@@ -20,5 +20,6 @@
   </form>
 {% endblock %}
 
-<script src="/scripts/post.js"></script>
-{% block scripts %}{% endblock %}
+{% block scripts %}
+  <script src="/scripts/create-post.js"></script>
+{% endblock %}
