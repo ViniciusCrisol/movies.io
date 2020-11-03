@@ -5,10 +5,27 @@ const resumeInput = this.document.getElementById('resume');
 const contentInput = this.document.getElementById('content');
 const thumbnailUrlInput = this.document.getElementById('thumbnail_url');
 
+function getFormData() {
+  const formValue = {
+    title: titleInput.value,
+    resume: resumeInput.value,
+    content: contentInput.value,
+    thumbnail_url: thumbnailUrlInput.value,
+  };
+
+  return formValue;
+}
+
 function submitForm(event) {
   event.preventDefault();
 
-  console.log(event);
+  const formData = getFormData();
+
+  // eslint-disable-next-line no-undef
+  fetch('/posts/create', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+  });
 }
 
 createPostForm.addEventListener('submit', submitForm);
