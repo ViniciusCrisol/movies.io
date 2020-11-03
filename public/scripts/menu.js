@@ -3,41 +3,29 @@ const mobileMenu = this.document.getElementById('mobile-menu');
 
 let menuIsActive = false;
 
-function activateMenu() {
+function openMenu() {
+  menuIsActive = true;
   mobileMenu.classList.add('active');
   hamburgerButton.classList.add('active');
 }
 
-function deactivateMenu() {
+function closeMenu() {
+  menuIsActive = false;
   mobileMenu.classList.remove('active');
   hamburgerButton.classList.remove('active');
 }
 
-function closeMenu() {
-  deactivateMenu();
-  menuIsActive = false;
+function toggleMenu() {
+  if (!menuIsActive) openMenu();
+  else closeMenu();
 }
 
-function toggleMenuVisibility() {
-  if (menuIsActive) {
-    closeMenu();
-    return;
-  }
-
-  activateMenu();
-  menuIsActive = true;
-}
-
-function getWindowSize() {
-  return this.screen.availWidth;
-}
-
-function removeClassActiveByWindowSize() {
-  const windowSize = getWindowSize();
+function deactivateMenuByWindowSize() {
+  const curentWindowSize = this.screen.availWidth;
   const WIDTH_TO_CHANGE_LAYOUT = 640;
 
-  if (windowSize >= WIDTH_TO_CHANGE_LAYOUT) closeMenu();
+  if (curentWindowSize >= WIDTH_TO_CHANGE_LAYOUT) closeMenu();
 }
 
-hamburgerButton.addEventListener('click', () => toggleMenuVisibility());
-this.window.addEventListener('resize', () => removeClassActiveByWindowSize());
+hamburgerButton.addEventListener('click', () => toggleMenu());
+this.window.addEventListener('resize', () => deactivateMenuByWindowSize());
