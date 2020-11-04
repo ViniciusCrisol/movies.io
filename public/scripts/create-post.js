@@ -16,16 +16,9 @@ function getFormData() {
   return formValue;
 }
 
-function submitForm(event) {
-  event.preventDefault();
-
+function submitForm() {
   const formData = getFormData();
-
-  // eslint-disable-next-line no-undef
-  fetch('/posts/create', {
-    method: 'POST',
-    body: JSON.stringify(formData),
-  });
+  axios.post('/posts/create', formData);
 }
 
 createPostForm.addEventListener('submit', submitForm);
