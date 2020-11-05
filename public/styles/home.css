@@ -9,9 +9,21 @@
 
   padding: 15px 30px;
   background: var(--primary);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 .tranding-container li h5 {
   font-size: 20px;
-  margin-bottom: 8px;
+}
+
+.tranding-container li p {
+  margin: 4px 0;
+}
+
+.tranding-container li span {
+  display: block;
+  padding-top: 4px;
+
+  text-align: right;
+  border-top: 1px solid;
 }

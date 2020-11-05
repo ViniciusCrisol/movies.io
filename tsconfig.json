@@ -9,6 +9,7 @@
     "baseUrl": "./src",
     "allowJs": true,
     "paths": {
+      "@utils/*": ["utils/*"],
       "@config/*": ["config/*"],
       "@shared/*": ["shared/*"],
       "@modules/*": ["modules/*"]

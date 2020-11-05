@@ -37,7 +37,7 @@ class PostsRepository implements IPostsRepository {
     const posts = await this.ormRepository.find({
       take: 4,
       order: {
-        created_at: 'ASC',
+        created_at: 'DESC',
       },
     });
 
