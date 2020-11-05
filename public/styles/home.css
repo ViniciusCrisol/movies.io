@@ -5,11 +5,20 @@
 }
 
 .tranding-container li {
-  list-style: none;
-
   padding: 15px 30px;
   background: var(--primary);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  list-style: none;
+  transition: filter 250ms;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tranding-container li:hover {
+  filter: brightness(1.05);
 }
 
 .tranding-container li h5 {
@@ -17,13 +26,20 @@
 }
 
 .tranding-container li p {
-  margin: 4px 0;
+  margin: 4px 0 8px;
 }
 
 .tranding-container li span {
-  display: block;
+  margin-top: auto;
   padding-top: 4px;
-
-  text-align: right;
   border-top: 1px solid;
+
+  display: block;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .tranding-container {
+    grid-template-columns: 1fr;
+  }
 }
