@@ -1,13 +1,21 @@
 {% extends "layouts/public.njk" %}
 
 {% block head %}
+  <link rel="stylesheet" href="/styles/home.css"/>
+
   <title>Bacana</title>
 {% endblock %}
 
 {% block content %}
 
-  {% for post in posts %}
-    <h1>{{ post.title }}</h1>
-  {% endfor %}
+  <ul class="tranding-container">
+    {% for post in posts %}
+      <li>
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.resume }}</p>
+        <span>{{ post.created_at }}</span>
+      </li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}

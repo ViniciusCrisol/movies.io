@@ -1,0 +1,17 @@
+.tranding-container {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tranding-container li {
+  list-style: none;
+
+  padding: 15px 30px;
+  background: var(--primary);
+}
+
+.tranding-container li h5 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
