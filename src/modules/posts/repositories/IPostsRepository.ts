@@ -6,5 +6,6 @@ export default interface IPostsRepository {
   delete(post: Post): Promise<void>;
   save(data: Post): Promise<Post>;
   get(): Promise<Post[]>;
+  getById(id: string): Promise<Post | undefined>;
   getTrending(): Promise<Post[]>;
 }

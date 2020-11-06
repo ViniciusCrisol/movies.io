@@ -33,6 +33,12 @@ class PostsRepository implements IPostsRepository {
     return posts;
   }
 
+  public async getById(id: string): Promise<Post | undefined> {
+    const post = await this.ormRepository.findOne(id);
+
+    return post;
+  }
+
   public async getTrending(): Promise<Post[]> {
     const posts = await this.ormRepository.find({
       take: 4,
