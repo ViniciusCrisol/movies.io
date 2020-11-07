@@ -16,7 +16,8 @@ body {
 body,
 input,
 button,
-textarea {
+textarea,
+pre {
   font-size: 16px;
   color: var(--black);
   font-family: 'Open Sans', sans-serif;

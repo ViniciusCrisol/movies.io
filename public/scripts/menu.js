@@ -1,5 +1,5 @@
-const hamburgerButton = this.document.getElementById('hamburger-button');
-const mobileMenu = this.document.getElementById('mobile-menu');
+const hamburgerButton = document.getElementById('hamburger-button');
+const mobileMenu = document.getElementById('mobile-menu');
 
 let menuIsActive = false;
 
@@ -21,11 +21,11 @@ function toggleMenu() {
 }
 
 function deactivateMenuByWindowSize() {
-  const curentWindowSize = this.screen.availWidth;
+  const curentWindowSize = screen.availWidth;
   const WIDTH_TO_CHANGE_LAYOUT = 640;
 
   if (curentWindowSize >= WIDTH_TO_CHANGE_LAYOUT) closeMenu();
 }
 
 hamburgerButton.addEventListener('click', () => toggleMenu());
-this.window.addEventListener('resize', () => deactivateMenuByWindowSize());
+window.addEventListener('resize', () => deactivateMenuByWindowSize());

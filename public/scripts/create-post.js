@@ -16,9 +16,12 @@ function getFormData() {
   return formValue;
 }
 
-function submitForm() {
+function submitForm(event) {
+  event.preventDefault();
   const formData = getFormData();
   axios.post('/posts/create', formData);
+
+  window.location.href = '/';
 }
 
 createPostForm.addEventListener('submit', submitForm);
