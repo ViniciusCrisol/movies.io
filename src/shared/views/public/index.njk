@@ -11,9 +11,11 @@
   <ul class="tranding-container">
     {% for post in posts %}
       <li>
-        <h5>{{ post.title }}</h5>
-        <p>{{ post.resume }}</p>
-        <span>{{ post.created_at }}</span>
+        <a href="/posts/{{post.id }}">
+          <h5>{{ post.title }}</h5>
+          <p>{{ post.resume }}</p>
+          <span>{{ post.created_at }}</span>
+        </a>
       </li>
     {% endfor %}
   </ul>

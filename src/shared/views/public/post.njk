@@ -1,0 +1,21 @@
+{% extends "layouts/public.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/home.css"/>
+
+  <title>Bacana</title>
+{% endblock %}
+
+{% block content %}
+
+  <div id="post-page">
+    <div class="header">
+      {{ post.title }}
+      {{ post.created_at }}
+    </div>
+    <pre>
+      {{ post.content }}
+    </pre>
+  </div>
+
+{% endblock %}

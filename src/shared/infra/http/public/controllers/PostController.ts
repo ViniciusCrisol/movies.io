@@ -17,6 +17,6 @@ export default class HomeController {
       created_at: formatDate(post.created_at),
     };
 
-    response.render('public/admin/index.njk', { post: postWithFormattedDate });
+    response.render('public/post.njk', { post: postWithFormattedDate });
   }
 }
