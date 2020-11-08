@@ -7,10 +7,10 @@ const thumbnailUrlInput = this.document.getElementById('thumbnail_url');
 
 function getFormData() {
   const formValue = {
-    title: titleInput.value,
-    resume: resumeInput.value,
-    content: contentInput.value,
-    thumbnail_url: thumbnailUrlInput.value,
+    title: titleInput.value.trim(),
+    resume: resumeInput.value.trim(),
+    content: contentInput.value.trim(),
+    thumbnail_url: thumbnailUrlInput.value.trim(),
   };
 
   return formValue;
@@ -21,7 +21,7 @@ function submitForm(event) {
   const formData = getFormData();
   axios.post('/posts/create', formData);
 
-  window.location.href = '/';
+  window.location.href = '/admin/posts/create';
 }
 
 createPostForm.addEventListener('submit', submitForm);

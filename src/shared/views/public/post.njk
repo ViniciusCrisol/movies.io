@@ -10,12 +10,10 @@
 
   <div id="post-page">
     <div class="header">
-      {{ post.title }}
-      {{ post.created_at }}
+      <span>{{ post.created_at }}</span>
+      <h2>{{ post.title }}</h2>
     </div>
-    <pre>
-      {{ post.content }}
-    </pre>
+    <pre>{{ post.content }}</pre>
   </div>
 
 {% endblock %}

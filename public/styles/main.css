@@ -36,6 +36,17 @@ a {
   margin: 0 auto;
 }
 
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: var(--black);
+}
+
+.footer-text {
+  color: #fff;
+}
+
 :root {
   --black: #232323;
   --primary: #ffc20e;

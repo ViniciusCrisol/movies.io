@@ -1,0 +1,7 @@
+#post-page .header span {
+  opacity: 0.6;
+}
+
+#post-page .header h2 {
+  margin: 20px 0 10px;
+}
