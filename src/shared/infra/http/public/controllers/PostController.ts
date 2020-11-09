@@ -4,7 +4,7 @@ import { container } from 'tsyringe';
 import formatDate from '@utils/formatDate';
 import GetPostService from '@modules/posts/services/GetPostService';
 
-export default class HomeController {
+export default class PostController {
   public async index(request: Request, response: Response): Promise<void> {
     const { id } = request.params;
 

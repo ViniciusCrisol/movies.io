@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
-export default class HomeController {
+export default class LoginController {
   public async index(request: Request, response: Response): Promise<void> {
-    response.render('public/admin/index.njk');
+    response.render('public/admin/login.njk');
   }
 }
