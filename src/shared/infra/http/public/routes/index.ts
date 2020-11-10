@@ -5,7 +5,6 @@ import HomeController from '../controllers/HomeController';
 import LoginController from '../controllers/LoginController';
 import Page404Controller from '../controllers/Page404Controller';
 import CreatePostController from '../controllers/CreatePostController';
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const publicRouter = Router();
 
@@ -18,11 +17,7 @@ const createPostController = new CreatePostController();
 publicRouter.get('/', homeController.index);
 publicRouter.get('/posts/:id', post.index);
 publicRouter.get('/admin/login', loginController.index);
-publicRouter.get(
-  '/admin/posts/criar',
-  ensureAuthenticated,
-  createPostController.index,
-);
+publicRouter.get('/admin/posts/criar', createPostController.index);
 
 publicRouter.use(page404Controller.index);
 
